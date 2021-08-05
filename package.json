@@ -10,5 +10,8 @@
     "priority-queue"
   ],
   "author": "Dejan Todorovic",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
 }
