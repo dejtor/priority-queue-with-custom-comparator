@@ -37,7 +37,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
    * @returns top of priority queue in O(1)
    */
   peek() {
-    return this.heap[0];
+        return JSON.parse(JSON.stringify(this.heap[0]));
   }
 
   private buildHeap(array: T[]) {
