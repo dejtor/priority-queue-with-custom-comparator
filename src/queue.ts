@@ -29,7 +29,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
      * @returns is priority queue empty in O(1)
      */
     isEmpty() {
-        return this.heap.length === 0;
+        return this.size() === 0;
     }
 
     /**
