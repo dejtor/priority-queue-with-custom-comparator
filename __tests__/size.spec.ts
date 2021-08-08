@@ -1,6 +1,5 @@
 import { PriorityQueue } from "../lib/queue";
-
-const defaultMaxComparator = (a: number, b: number) => a > b;
+import { defaultMaxComparator } from "./test.helper";
 
 test('initial state (created with initialElements)', () => {
     const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator, initialElements: [3, 1] });
