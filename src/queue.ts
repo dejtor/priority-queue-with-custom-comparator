@@ -34,10 +34,10 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
 
     /**
      *
-     * @returns top of priority queue in O(1)
+     * @returns top of priority queue in O(1), if priority queue is empty returns undefined
      */
     peek(): T {
-        return JSON.parse(JSON.stringify(this.heap[0]));
+        return this.heap[0] ? JSON.parse(JSON.stringify(this.heap[0])) : undefined;
     }
 
     /**
@@ -94,9 +94,13 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
 
     /**
      *
-     * @returns top of priority queue and removes it from priority queue in O(log n)
+     * @returns top of priority queue and removes it from priority queue in O(log n), if priority queue is empty returns undefined
      */
     pop() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
         const returnValue = this.peek();
         const lastIndexOfHeapArray = this.size() - 1;
         if (lastIndexOfHeapArray > 0) {
