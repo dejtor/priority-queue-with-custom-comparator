@@ -1,8 +1,8 @@
-import { IPriorityQueue, PriorityQueueOptions } from './queue.d';
+import { IPriorityQueue, PriorityQueueComparator, PriorityQueueOptions } from './queue.d';
 
 export class PriorityQueue<T> implements IPriorityQueue<T> {
     private heap: T[];
-    private comparator;
+    private comparator: PriorityQueueComparator<T>;
 
     /**
      *
@@ -36,15 +36,15 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
      *
      * @returns top of priority queue in O(1)
      */
-    peek() {
+    peek(): T {
         return JSON.parse(JSON.stringify(this.heap[0]));
     }
 
-    clear() {
+    clear(): void {
         this.heap = [];
     };
 
-    has(value) {
+    has(value: T) {
         return !!this.heap.find(ele => ele === value);
     }
 
@@ -64,7 +64,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
      * @param value element to be added to heap, adds it in O(log n) operations, n is size of heap
      * @returns size of heap
      */
-    push(value) {
+    push(value: T) {
         this.heap.push(value);
         this.siftUp();
         return this.size();
@@ -75,7 +75,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
      * @param values elements to be added to heap, adds it in O(k * log n) operations, n is size of heap, k is number of elements added
      * @returns size of heap
      */
-    pushMany(values) {
+    pushMany(values: T[]) {
         values.forEach((value) => {
             this.push(value);
         });
@@ -97,23 +97,23 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
         return returnValue;
     }
 
-    private getParent(index) {
+    private getParent(index: number) {
         return ((index + 1) >>> 1) - 1;
     }
 
-    private getLeftChild(index) {
+    private getLeftChild(index: number) {
         return (index << 1) + 1;
     }
 
-    private getRightChild(index) {
+    private getRightChild(index: number) {
         return (index + 1) << 1;
     }
 
-    private compareByIndex(i, j) {
+    private compareByIndex(i: number, j: number) {
         return this.comparator(this.heap[i], this.heap[j]);
     }
 
-    private swap(i, j) {
+    private swap(i: number, j: number) {
         [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
     }
 
