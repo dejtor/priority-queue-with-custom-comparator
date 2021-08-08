@@ -1,4 +1,4 @@
-import { IPriorityQueue, PriorityQueueComparator, PriorityQueueOptions } from './queue.d';
+import { IPriorityQueue, PriorityQueueComparator, PriorityQueueOptions } from './queueInterfaces';
 
 export class PriorityQueue<T> implements IPriorityQueue<T> {
     private heap: T[];
