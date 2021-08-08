@@ -40,14 +40,24 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
         return JSON.parse(JSON.stringify(this.heap[0]));
     }
 
+    /**
+     * clears priority queue in O(1)
+     */
     clear(): void {
         this.heap = [];
     };
 
+    /**
+     * checks if value exists in priority queue in O(n)
+     */
     has(value: T) {
         return !!this.heap.find(ele => ele === value);
     }
 
+    /**
+     * 
+     * @returns all values of priority queue in O(n)
+     */
     values() {
         return JSON.parse(JSON.stringify(this.heap)) as T[];
     }
