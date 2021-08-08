@@ -98,9 +98,9 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
      */
     pop() {
         const returnValue = this.peek();
-        const lastIndex = this.size() - 1;
-        if (lastIndex > 0) {
-            this.swap(0, lastIndex);
+        const lastIndexOfHeapArray = this.size() - 1;
+        if (lastIndexOfHeapArray > 0) {
+            this.swap(0, lastIndexOfHeapArray);
         }
         this.heap.pop();
         this.siftDown();
