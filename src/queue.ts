@@ -138,16 +138,23 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
 
     private siftDown() {
         let node = 0;
+
+        let leftChild = this.getLeftChild(node);
+        let rightChild = this.getRightChild(node)
         while (
-            (this.getLeftChild(node) < this.size() && this.compareByIndex(this.getLeftChild(node), node)) ||
-            (this.getRightChild(node) < this.size() && this.compareByIndex(this.getRightChild(node), node))
+            (leftChild < this.size() && this.compareByIndex(leftChild, node)) ||
+            (rightChild < this.size() && this.compareByIndex(rightChild, node))
         ) {
             const maxChild =
-                this.getRightChild(node) < this.size() && this.compareByIndex(this.getRightChild(node), this.getLeftChild(node))
-                    ? this.getRightChild(node)
-                    : this.getLeftChild(node);
+                rightChild < this.size() && this.compareByIndex(rightChild, leftChild)
+                    ? rightChild
+                    : leftChild;
+
             this.swap(node, maxChild);
+
             node = maxChild;
+            leftChild = this.getLeftChild(node);
+            rightChild = this.getRightChild(node)
         }
     }
 }
