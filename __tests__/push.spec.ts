@@ -1,7 +1,7 @@
 import { PriorityQueue } from '../lib/queue';
 import { defaultMaxComparator } from './test.helper';
 
-test('initial state (created with initialElements) and some added', () => {
+test('initial state (created without initialElements) and some added', () => {
   const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
 
   expect(numberPriorityQueue.has(5)).toBe(false);
