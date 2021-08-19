@@ -1,6 +1,10 @@
 import { PriorityQueue } from '../lib/queue';
 import { defaultMaxComparator } from './test.helper';
 
+afterEach(() => {
+    jest.clearAllMocks();
+});
+
 test('initial state (created without initialElements) and some added', () => {
     const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
 
