@@ -1,10 +1,6 @@
 import { PriorityQueue } from '../lib/queue';
 import { defaultMaxComparator } from './test.helper';
 
-afterEach(() => {
-  jest.clearAllMocks();
-});
-
 test('check if needed functions are called', () => {
   const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
   const siftUpFn = jest.spyOn(PriorityQueue.prototype as any, 'siftUp');
@@ -14,6 +10,8 @@ test('check if needed functions are called', () => {
 
   expect(siftUpFn).toBeCalledTimes(1);
   expect(sizeFn).toBeCalledTimes(2);
+
+  jest.clearAllMocks();
 });
 
 test('initial state (created without initialElements) and some added', () => {
