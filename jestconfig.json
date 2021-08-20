@@ -10,5 +10,10 @@
         "jsx",
         "json",
         "node"
+    ],
+    "collectCoverageFrom": [
+        "lib/queue.js",
+        "!**/__tests__/**",
+        "!**/node_modules/**"
     ]
 }
