@@ -2,7 +2,8 @@
   "name": "priority-queue-with-custom-comparator",
   "version": "0.0.1",
   "description": "Priority queue data structure where you are able to set your own compare function.",
-  "main": "index.js",
+  "main": "lib/queue.ts",
+  "types": "lib/queueInterfaces.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -11,7 +12,12 @@
     "test": "jest --config jestconfig.json",
     "test:coverage": "jest --config jestconfig.json --coverage",
     "format": "prettier --write \"src/**/*.ts\" \"__tests__/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "priority-queue"
