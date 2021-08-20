@@ -65,7 +65,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
   private buildHeap(array: T[]) {
     this.heap = JSON.parse(JSON.stringify(array)) as T[];
     for (let i = Math.floor(array.length / 2) - 1; i >= 0; i--) {
-      this.siftDown();
+      this.siftDown(i);
     }
   }
 
@@ -140,9 +140,7 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
     }
   }
 
-  private siftDown() {
-    let node = 0;
-
+  private siftDown(node = 0) {
     let leftChild = this.getLeftChild(node);
     let rightChild = this.getRightChild(node);
     while (
