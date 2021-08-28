@@ -1,4 +1,4 @@
-import { PriorityQueue } from '../lib/queue';
+import PriorityQueue from '../lib/queue';
 import { defaultMaxComparator } from './test.helper';
 
 afterEach(() => {

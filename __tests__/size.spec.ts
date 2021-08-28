@@ -1,4 +1,4 @@
-import { PriorityQueue } from '../lib/queue';
+import PriorityQueue from '../lib/queue';
 import { defaultMaxComparator } from './test.helper';
 
 test('initial state (created with initialElements) and no elements added', () => {
