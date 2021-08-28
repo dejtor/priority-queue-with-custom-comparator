@@ -13,6 +13,7 @@
     "test:coverage": "jest --config jestconfig.json --coverage",
     "format": "prettier --write \"src/**/*.ts\" \"__tests__/*.ts\"",
     "lint": "tslint -p tsconfig.json",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",

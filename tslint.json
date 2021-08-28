@@ -1,7 +1,6 @@
 {
     "rules": {
-        "no-bitwise": false,
-        "no-consecutive-blank-lines": true
+        "no-bitwise": false
     },
     "extends": [
         "tslint:recommended",
