@@ -1,6 +1,6 @@
 import { IPriorityQueue, PriorityQueueComparator, PriorityQueueOptions } from './queueInterfaces';
 
-class PriorityQueue<T> implements IPriorityQueue<T> {
+export default class PriorityQueue<T> implements IPriorityQueue<T> {
   private heap: T[];
   private comparator: PriorityQueueComparator<T>;
 
@@ -157,5 +157,3 @@ class PriorityQueue<T> implements IPriorityQueue<T> {
     }
   }
 }
-
-export = PriorityQueue;
