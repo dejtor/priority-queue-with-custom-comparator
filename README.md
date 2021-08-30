@@ -1,25 +1,117 @@
-Priority queue implemented using heap.
+# priority-queue-with-custom-comparator
 
-example:
+Priority queue implemented using Heap data structure.
+
+# Contents
+
+- [Example](#Example)
+  - [TS](#TS)
+  - [JS](#JS)
+- [Functions](#Functions)
+
+## Example:
+
+### TS
 
 ```
-const q = new PriorityQueue<number>({
+import PriorityQueue from 'priority-queue-with-custom-comparator';
+
+class Rand {
+    num: number;
+}
+
+  const numberPriorityQueue = new PriorityQueue<number>({
     comparator: (a, b) => {
       return a - b < 0;
     },
+    initialElements: [3, 1],
   });
-  q.pushMany([-1, 4, 8, -9]);
-  q.push(2);
+  numberPriorityQueue.pushMany([-1, 4, 8, -9]);
+  numberPriorityQueue.push(2);
+
+  console.log('top of queue', numberPriorityQueue.pop());
+  console.log('top of queue', numberPriorityQueue.peek());
+  console.log(
+    'size after inserting 1, 2 and 3',
+    numberPriorityQueue.pushMany([1, 2, 3]),
+  );
+
+  const classPriorityQueue = new PriorityQueue<Rand>({
+    comparator: (a, b) => a.num > b.num,
+  });
+
+  classPriorityQueue.pushMany([
+    { num: 5 },
+    { num: 1 },
+    { num: -9 },
+    { num: 11 },
+    { num: 15 },
+    { num: 51 },
+    { num: 155 },
+  ]);
+
+  console.log('classPriorityQueue: ', classPriorityQueue.values());
+
+  const stringPriorityQueue = new PriorityQueue<string>({
+    comparator: (a, b) => a.length > b.length,
+  });
+
+  stringPriorityQueue.pushMany(['abcd', 'a', 'abcdeef', 'string']);
+
+  console.log('stringPriorityQueue: ', stringPriorityQueue.values());
 ```
 
-functions:
+### JS
+
+```
+import PriorityQueue from 'priority-queue-with-custom-comparator'
+
+class Rand {
+    num;
+}
+
+const numberPriorityQueue = new PriorityQueue.default({
+    comparator: (a, b) => {
+        return a - b < 0;
+    },
+    initialElements: [3, 1],
+});
+numberPriorityQueue.pushMany([-1, 4, 8, -9]);
+numberPriorityQueue.push(2);
+
+console.log('top of queue', numberPriorityQueue.pop());
+console.log('top of queue', numberPriorityQueue.peek());
+console.log('size after inserting 1, 2 and 3', numberPriorityQueue.pushMany([1, 2, 3]));
+
+const classPriorityQueue = new PriorityQueue.default({ comparator: (a, b) => a.num > b.num });
+
+classPriorityQueue.pushMany([
+    { num: 5 },
+    { num: 1 },
+    { num: -9 },
+    { num: 11 },
+    { num: 15 },
+    { num: 51 },
+    { num: 155 },
+]);
+
+console.log('classPriorityQueue: ', classPriorityQueue.values());
+
+const stringPriorityQueue = new PriorityQueue.default({ comparator: (a, b) => a.length > b.length });
+
+stringPriorityQueue.pushMany(['abcd', 'a', 'abcdeef', 'string']);
+
+console.log('stringPriorityQueue: ', stringPriorityQueue.values());
+```
+
+## Functions:
 
 ```
     /**
      *
      * @param options
      * options.comparator: function used to compare elements;
-     * options.initialElements: elements to be put in priority queue initially in O(n) time
+     * options.initialElements: (optional) elements to be put in priority queue initially in O(n) time
      */
     constructor(options: PriorityQueueOptions<T>);
     /**
