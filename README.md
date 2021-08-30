@@ -1,5 +1,10 @@
 # priority-queue-with-custom-comparator
 
+[![npm](https://img.shields.io/npm/v/priority-queue-with-custom-comparator.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator)
+[![npm](https://img.shields.io/npm/dm/priority-queue-with-custom-comparator.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator)
+
+<img src="https://user-images.githubusercontent.com/6517308/121813242-859a9700-cc6b-11eb-99c0-49e5bb63005b.jpg">
+
 Priority queue implemented using Heap data structure, allows using custom comparator function.
 
 # Contents
