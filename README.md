@@ -50,7 +50,6 @@ functions:
      * @returns all values of priority queue in O(n)
      */
     values(): T[];
-    private buildHeap;
     /**
      *
      * @param value element to be added to heap, adds it in O(log n) operations, n is size of heap
