@@ -1,6 +1,6 @@
 # priority-queue-with-custom-comparator
 
-Priority queue implemented using Heap data structure.
+Priority queue implemented using Heap data structure, allows using custom comparator function.
 
 # Contents
 
