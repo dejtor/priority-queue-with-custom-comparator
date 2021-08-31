@@ -25,7 +25,14 @@
     "postversion": "git push && git push --tags"
   },
   "keywords": [
-    "priority-queue"
+    "priority-queue",
+    "heap",
+    "custom-comparator",
+    "comparator",
+    "data-structure",
+    "data-structures",
+    "priority",
+    "queue"
   ],
   "author": "Dejan Todorovic",
   "license": "ISC",
