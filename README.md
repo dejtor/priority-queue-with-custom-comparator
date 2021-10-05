@@ -1,6 +1,6 @@
 # priority-queue-with-custom-comparator
 
-![npm](https://img.shields.io/npm/v/priority-queue-with-custom-comparator) [![npm](https://img.shields.io/npm/dm/priority-queue-with-custom-comparator.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator) ![GitHub repo size](https://img.shields.io/github/repo-size/dejtor/priority-queue-with-custom-comparator) ![NPM](https://img.shields.io/npm/l/priority-queue-with-custom-comparator) ![GitHub last commit](https://img.shields.io/github/last-commit/dejtor/priority-queue-with-custom-comparator)
+![npm](https://img.shields.io/npm/v/priority-queue-with-custom-comparator) [![npm](https://img.shields.io/npm/dm/priority-queue-with-custom-comparator.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/priority-queue-with-custom-comparator) ![GitHub repo size](https://img.shields.io/github/repo-size/dejtor/priority-queue-with-custom-comparator) ![NPM](https://img.shields.io/npm/l/priority-queue-with-custom-comparator) ![GitHub last commit](https://img.shields.io/github/last-commit/dejtor/priority-queue-with-custom-comparator) ![Travis (.com)](https://img.shields.io/travis/com/dejtor/priority-queue-with-custom-comparator)
 
 <img src="https://user-images.githubusercontent.com/6517308/121813242-859a9700-cc6b-11eb-99c0-49e5bb63005b.jpg">
 
