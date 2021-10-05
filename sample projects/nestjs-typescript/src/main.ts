@@ -13,5 +13,7 @@ async function bootstrap() {
   });
   q.pushMany([-1, 4, 8, -9]);
   q.push(2);
+
+  console.log('Queue size: ', q.size());
 }
 bootstrap();
