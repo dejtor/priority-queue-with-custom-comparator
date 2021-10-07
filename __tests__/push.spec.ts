@@ -3,6 +3,7 @@ import { defaultMaxComparator } from './test.helper';
 
 test('check if needed functions are called', () => {
   const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const siftUpFn = jest.spyOn(PriorityQueue.prototype as any, 'siftUp');
   const sizeFn = jest.spyOn(numberPriorityQueue, 'size');
 
