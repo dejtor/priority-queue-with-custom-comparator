@@ -1,6 +1,6 @@
 export type PriorityQueueComparator<T> = (a: T, b: T) => boolean;
 
-export interface PriorityQueueOptions<T> {
+export interface IPriorityQueueOptions<T> {
   comparator: PriorityQueueComparator<T>;
   initialElements?: T[];
 }

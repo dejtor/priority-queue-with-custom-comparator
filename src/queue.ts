@@ -1,4 +1,4 @@
-import { IPriorityQueue, PriorityQueueComparator, PriorityQueueOptions } from './queueInterfaces';
+import { IPriorityQueue, PriorityQueueComparator, IPriorityQueueOptions } from './queueInterfaces';
 
 export default class PriorityQueue<T> implements IPriorityQueue<T> {
   private heap: T[];
@@ -10,7 +10,7 @@ export default class PriorityQueue<T> implements IPriorityQueue<T> {
    * options.comparator: function used to compare elements;
    * options.initialElements: elements to be put in priority queue initially in O(n) time
    */
-  constructor(options: PriorityQueueOptions<T>) {
+  constructor(options: IPriorityQueueOptions<T>) {
     this.heap = [];
     this.comparator = options.comparator;
     if (options.initialElements) this.buildHeap(options.initialElements);
