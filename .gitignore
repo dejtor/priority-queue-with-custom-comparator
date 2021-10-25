@@ -1,3 +1,4 @@
 node_modules
 lib
 coverage
+sample-projects\**\node_modules
