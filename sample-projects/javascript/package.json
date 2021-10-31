@@ -1,5 +1,5 @@
 {
-  "name": "tesst-library",
+  "name": "test-library-with-js",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "priority-queue-with-custom-comparator": "^0.0.4"
+    "priority-queue-with-custom-comparator": "^1.0.2"
   }
 }
