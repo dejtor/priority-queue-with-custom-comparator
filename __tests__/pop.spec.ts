@@ -1,4 +1,4 @@
-import PriorityQueue from '../lib/queue';
+import PriorityQueue from '../src/queue';
 import { defaultMaxComparator } from './test.helper';
 
 test('check if needed functions are called', () => {

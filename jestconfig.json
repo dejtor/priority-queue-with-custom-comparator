@@ -12,7 +12,7 @@
         "node"
     ],
     "collectCoverageFrom": [
-        "lib/queue.js",
+        "src/queue.ts",
         "!**/__tests__/**",
         "!**/node_modules/**"
     ]
