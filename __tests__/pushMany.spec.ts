@@ -10,8 +10,6 @@ test('initial state (created without initialElements) and some added', () => {
     comparator: defaultMaxComparator,
   });
 
-  const pushFn = jest.spyOn(numberPriorityQueue, 'push');
-
   expect(numberPriorityQueue.has(5)).toBe(false);
   expect(numberPriorityQueue.has(2)).toBe(false);
   expect(numberPriorityQueue.has(0)).toBe(false);
@@ -20,8 +18,6 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.size()).toBe(0);
 
   numberPriorityQueue.pushMany([5, 2, -1]);
-
-  expect(pushFn).toBeCalledTimes(3);
 
   expect(numberPriorityQueue.has(5)).toBe(true);
   expect(numberPriorityQueue.has(2)).toBe(true);
