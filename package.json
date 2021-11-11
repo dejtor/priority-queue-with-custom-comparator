@@ -12,7 +12,7 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "test": "jest --config jestconfig.json",
     "test:coverage": "jest --config jestconfig.json --coverage",
     "format": "prettier --write \"src/**/*.ts\" \"__tests__/*.ts\" \"sample-projects/**/*.[tj]s\"",
