@@ -42,7 +42,9 @@ test('initial state (created with initialElements) and some added', () => {
 });
 
 test('initial state (created without initialElements) and none added', () => {
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
 
   expect(numberPriorityQueue.has(5)).toBe(false);
   expect(numberPriorityQueue.has(2)).toBe(false);
@@ -54,7 +56,9 @@ test('initial state (created without initialElements) and none added', () => {
 });
 
 test('initial state (created without initialElements) and some added', () => {
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
 
   expect(numberPriorityQueue.has(5)).toBe(false);
   expect(numberPriorityQueue.has(2)).toBe(false);

@@ -6,7 +6,9 @@ afterEach(() => {
 });
 
 test('initial state (created without initialElements) and some added', () => {
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
 
   const pushFn = jest.spyOn(numberPriorityQueue, 'push');
 

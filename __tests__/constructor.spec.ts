@@ -19,7 +19,9 @@ test('initial state (created with initialElements)', () => {
 test('initial state (created without initialElements)', () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const buildHeapFn = jest.spyOn(PriorityQueue.prototype as any, 'buildHeap');
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
   expect(buildHeapFn).toBeCalledTimes(0);
   expect(numberPriorityQueue.values().toString()).toBe([].toString());
 });

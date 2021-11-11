@@ -1,4 +1,8 @@
-import { IPriorityQueue, PriorityQueueComparator, IPriorityQueueOptions } from './queueInterfaces';
+import {
+  IPriorityQueue,
+  PriorityQueueComparator,
+  IPriorityQueueOptions,
+} from './queueInterfaces';
 
 export default class PriorityQueue<T> implements IPriorityQueue<T> {
   private heap: T[];
@@ -147,7 +151,10 @@ export default class PriorityQueue<T> implements IPriorityQueue<T> {
       (leftChild < this.size() && this.compareByIndex(leftChild, node)) ||
       (rightChild < this.size() && this.compareByIndex(rightChild, node))
     ) {
-      const maxChild = rightChild < this.size() && this.compareByIndex(rightChild, leftChild) ? rightChild : leftChild;
+      const maxChild =
+        rightChild < this.size() && this.compareByIndex(rightChild, leftChild)
+          ? rightChild
+          : leftChild;
 
       this.swap(node, maxChild);
 

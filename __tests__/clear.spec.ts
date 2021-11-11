@@ -15,7 +15,9 @@ test('initial state (created with initialElements)', () => {
 });
 
 test('initial state (created without initialElements)', () => {
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
 
   expect(numberPriorityQueue.size()).toBe(0);
 

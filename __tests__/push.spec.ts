@@ -2,7 +2,9 @@ import PriorityQueue from '../lib/queue';
 import { defaultMaxComparator } from './test.helper';
 
 test('check if needed functions are called', () => {
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const siftUpFn = jest.spyOn(PriorityQueue.prototype as any, 'siftUp');
   const sizeFn = jest.spyOn(numberPriorityQueue, 'size');
@@ -16,7 +18,9 @@ test('check if needed functions are called', () => {
 });
 
 test('initial state (created without initialElements) and some added', () => {
-  const numberPriorityQueue = new PriorityQueue<number>({ comparator: defaultMaxComparator });
+  const numberPriorityQueue = new PriorityQueue<number>({
+    comparator: defaultMaxComparator,
+  });
 
   expect(numberPriorityQueue.has(5)).toBe(false);
   expect(numberPriorityQueue.has(2)).toBe(false);
@@ -86,7 +90,9 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(false);
   expect(numberPriorityQueue.has(185)).toBe(false);
   expect(numberPriorityQueue.has(201)).toBe(false);
-  expect(numberPriorityQueue.values().toString()).toBe([6, 5, 2, -1].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [6, 5, 2, -1].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(4);
 
   numberPriorityQueue.push(6);
@@ -101,7 +107,9 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(false);
   expect(numberPriorityQueue.has(185)).toBe(false);
   expect(numberPriorityQueue.has(201)).toBe(false);
-  expect(numberPriorityQueue.values().toString()).toBe([6, 6, 2, -1, 5].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [6, 6, 2, -1, 5].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(5);
 
   numberPriorityQueue.push(-2);
@@ -116,7 +124,9 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(false);
   expect(numberPriorityQueue.has(185)).toBe(false);
   expect(numberPriorityQueue.has(201)).toBe(false);
-  expect(numberPriorityQueue.values().toString()).toBe([6, 6, 2, -1, 5, -2].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [6, 6, 2, -1, 5, -2].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(6);
 
   numberPriorityQueue.push(-9);
@@ -131,7 +141,9 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(false);
   expect(numberPriorityQueue.has(185)).toBe(false);
   expect(numberPriorityQueue.has(201)).toBe(false);
-  expect(numberPriorityQueue.values().toString()).toBe([6, 6, 2, -1, 5, -2, -9].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [6, 6, 2, -1, 5, -2, -9].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(7);
 
   numberPriorityQueue.push(58);
@@ -146,7 +158,9 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(true);
   expect(numberPriorityQueue.has(185)).toBe(false);
   expect(numberPriorityQueue.has(201)).toBe(false);
-  expect(numberPriorityQueue.values().toString()).toBe([58, 6, 2, 6, 5, -2, -9, -1].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [58, 6, 2, 6, 5, -2, -9, -1].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(8);
 
   numberPriorityQueue.push(185);
@@ -161,7 +175,9 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(true);
   expect(numberPriorityQueue.has(185)).toBe(true);
   expect(numberPriorityQueue.has(201)).toBe(false);
-  expect(numberPriorityQueue.values().toString()).toBe([185, 58, 2, 6, 5, -2, -9, -1, 6].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [185, 58, 2, 6, 5, -2, -9, -1, 6].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(9);
 
   numberPriorityQueue.push(201);
@@ -176,6 +192,8 @@ test('initial state (created without initialElements) and some added', () => {
   expect(numberPriorityQueue.has(58)).toBe(true);
   expect(numberPriorityQueue.has(185)).toBe(true);
   expect(numberPriorityQueue.has(201)).toBe(true);
-  expect(numberPriorityQueue.values().toString()).toBe([201, 185, 2, 6, 58, -2, -9, -1, 6, 5].toString());
+  expect(numberPriorityQueue.values().toString()).toBe(
+    [201, 185, 2, 6, 58, -2, -9, -1, 6, 5].toString(),
+  );
   expect(numberPriorityQueue.size()).toBe(10);
 });
