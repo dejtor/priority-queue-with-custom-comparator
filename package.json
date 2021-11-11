@@ -1,6 +1,6 @@
 {
   "name": "priority-queue-with-custom-comparator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Priority queue data structure where you are able to set your own compare function.",
   "main": "lib/queue.js",
   "types": "lib/queue.d.ts",
